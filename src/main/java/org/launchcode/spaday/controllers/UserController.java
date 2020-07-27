@@ -23,6 +23,12 @@ public class UserController {
             model.addAttribute("username", user.getUsername());
             return "user/index";
         }
-        return "user/add";
+        else {
+            model.addAttribute("username", user.getUsername());
+            model.addAttribute("email", user.getEmail());
+            model.addAttribute("error", "Passwords should match");
+            return "user/add";
+
+        }
     }
 }

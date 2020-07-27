@@ -8,10 +8,10 @@
 
 <form method="post" action="/user">
     <label>Username
-        <input type="text" name="username">
+        <input type="text" name="username" th:value="${username}">
     </label>
     <label>Email
-        <input type="email" name="email">
+        <input type="email" name="email" th:value="${email}">
     </label>
     <label>Password
         <input type="password" name="password">
@@ -22,6 +22,6 @@
     <input type="submit">
 
 </form>
-
+    <p th:if="${error}" th:text="${error}"></p>
 </body>
 </html>
